@@ -1,0 +1,52 @@
+ /* global variables */
+ :root {
+  --icons-color: #a86534;
+  --icons-light-color: #fff;
+  --icons-bg-color: #e9dfdf;
+  --shadow-dark-color: rgb(40, 38, 38);
+  --shadow-light-color: #857b7ba0;
+
+  --home-bg-color: #232835;
+  --nav-color: white;
+  --link-color: #002000;
+  --link-hover-color: #2d69fd;
+  --ellipse-color: #ae54c27d;
+  --hero-paragraph :#a6a6a6;
+  --service-card-color: #ffffff3d;
+  --btn-text-color: #7b7e86;
+  --name-txt-color: #222222;
+  --username-txt-color: #555555;
+  --main-bg-gradient-color-A: #0b0811;
+  --main-bg-gradient-color-B: #320b12;
+  --box-shadow: .2rem .2rem .5rem var(--shadow-light-color), -.2rem -.2rem .5rem var(--shadow-light-color); 
+  --box-shadow-two: .1rem .1rem .3rem var(--shadow-dark-color), -.1rem -.1rem .2rem var(--shadow-dark-color);
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+  }
+}

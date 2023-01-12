@@ -1,0 +1,98 @@
+.marketPlaceSection {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    width: 80%;
+    margin:  0 6rem 5rem 6rem;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    flex-direction: column;
+}
+
+.title h2 {
+    font-size: 3rem;
+}
+
+.title p {
+    color: var(--btn-text-color);
+}
+
+.marketPlaceTypes {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.marketPlaceTypes button:not(.blue) {
+    color: black;
+    border-color: var(--btn-text-color);
+}
+
+.marketPlaces {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.marketplace {
+    box-shadow: rgba(100, 100, 111, .2) 0px 7px 29px 0px;
+    padding: .5rem;
+    border-radius: 1rem;
+    width: max-content;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+.marketplace:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+          rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+          rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.image {
+    margin-bottom: 1rem;
+}
+
+
+.name {
+    display: flex;
+    color: var(--name-txt-color);
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+.username {
+    color: var(--username-txt-color);
+    font-size: 0.8rem;
+    padding: 0 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+.priceContainer {
+padding: 0 1rem;
+display: flex;
+justify-content: space-between;
+color: #02204e;
+}
+
+@media screen and (min-device-width: 280px) and (max-device-width: 1080px) {
+    .marketPlaceTypes {
+        margin: 2rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    } 
+
+    .marketPlaces {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+  }
+

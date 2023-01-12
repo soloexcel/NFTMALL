@@ -1,0 +1,18 @@
+.button {
+    border-radius: 4rem;
+    padding: 0.8rem 2rem;
+    border: none;
+    color: var(--nav-color);
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.button:not(.blue) {
+    background-color: transparent;
+    border: 1px solid var(--nav-color);
+
+}
+
+.blue {
+    background-color: var(--link-hover-color) ;
+}

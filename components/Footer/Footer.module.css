@@ -1,0 +1,38 @@
+.footerSection {
+    background: #443357;
+    background: linear-gradient(to right, #443357, #394053);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 8rem;
+    gap: 7rem;
+}
+
+.row {
+    color: #9ea7ad;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.row h3 {
+    color: white;
+}
+
+.description {
+    color: white;
+}
+
+.socialIcons {
+    display: flex;
+    gap: 1rem;
+}
+
+.icon {
+    border: 1px solid #2d68fd7f;
+    padding: 0.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}

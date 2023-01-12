@@ -1,0 +1,31 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 2rem;   
+}
+
+.toggle {
+    display: none;
+}
+
+.links { 
+    height: 4rem;  
+    padding: 2.5rem 8rem;
+    background-color: var(--nav-color);
+    clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.li{
+color: var(--link-color);
+ 
+}
+
+.li:hover {
+    color: var(--link-hover-color);
+    transition: .5s all ease-in-out; 
+}

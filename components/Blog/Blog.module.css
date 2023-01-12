@@ -1,0 +1,33 @@
+.blogSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin: 0 9rem 5rem 9rem;
+}
+
+.blogContent {
+     display: flex;
+     justify-content:  center;
+     flex-direction: column;
+     gap: 3rem;
+}
+
+.blogContent h2 {
+    font-size: 4rem; 
+}
+
+.blogContent p {
+    line-height: 2rem;
+    color: var(--btn-text-color);
+     
+}
+
+.image {
+    width: 200%;
+}
+
+.img {
+    width: 100%;
+    height: auto;
+}

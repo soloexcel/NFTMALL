@@ -1,0 +1,40 @@
+.marketPlaceSection {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    width: 80%;
+    margin:  0 6rem 5rem 6rem;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    flex-direction: column;
+}
+
+.title h2 {
+    font-size: 3rem;
+}
+
+.title p {
+    color: var(--btn-text-color);
+}
+
+.marketPlaceTypes {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.marketPlaceTypes button:not(.blue) {
+    color: black;
+    border-color: var(--btn-text-color);
+}
+
+.marketPlaces {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
