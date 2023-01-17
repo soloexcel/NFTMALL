@@ -1,10 +1,12 @@
 
-// import { useLocation, useParams } from 'react-router-dom';
-import Router
+import { useLocation, useParams } from 'react-router-dom';
+import Router from "next/router";
+import Link from "next/link";
 import MarketplaceJSON from "../Marketplace.json";
 import axios from "axios";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import MPCard from '../components/MP/MPCard/MPCard';
+import NFTCard from "./NFTCard";
 // import MPCard from "../components/MP/MPCard/MPCard";
 
 const profile = () => {
@@ -85,7 +87,7 @@ const profile = () => {
                 <h2 className="font-bold">Your NFTs</h2>
                 <div className="flex justify-center flex-wrap max-w-screen-xl">
                     {data.map((value, index) => {
-                    return <MPCard data={value} key={index}/>;
+                    return <NFTCard data={value} key={index}/>;
                     })}
                 </div>
                 <div className="mt-10 text-xl">
