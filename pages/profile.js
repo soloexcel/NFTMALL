@@ -1,11 +1,13 @@
-// import Navbar from "./Navbar";
-import { useLocation, useParams } from 'react-router-dom';
+
+// import { useLocation, useParams } from 'react-router-dom';
+import Router
 import MarketplaceJSON from "../Marketplace.json";
 import axios from "axios";
 import { useState } from "react";
-import NFTTile from "./NFTTile";
+import MPCard from '../components/MP/MPCard/MPCard';
+// import MPCard from "../components/MP/MPCard/MPCard";
 
-export default function Profile () {
+const profile = () => {
     const [data, updateData] = useState([]);
     const [dataFetched, updateFetched] = useState(false);
     const [address, updateAddress] = useState("0x");
@@ -83,7 +85,7 @@ export default function Profile () {
                 <h2 className="font-bold">Your NFTs</h2>
                 <div className="flex justify-center flex-wrap max-w-screen-xl">
                     {data.map((value, index) => {
-                    return <NFTTile data={value} key={index}></NFTTile>;
+                    return <MPCard data={value} key={index}/>;
                     })}
                 </div>
                 <div className="mt-10 text-xl">
@@ -94,3 +96,4 @@ export default function Profile () {
         </div>
     )
 };
+export default profile

@@ -6,7 +6,8 @@ import Services from "./Services/Services";
 import Blog from "./Blog/Blog";
 import Subsciption from "./Subscription/Subscription"
 import MP from "./MP/MP";
+import MPCard from "./MP/MPCard/MPCard";
 import Footer from "./Footer/Footer";
 import UploadNFT from "./UploadNFT/UploadNFT";
 
-export { HeroSection, Navbar, Button, Clients, Services, Blog, Subsciption, MP, Footer, UploadNFT };
+export { HeroSection, Navbar, Button, Clients, Services, Blog, Subsciption, MP, MPCard, Footer, UploadNFT };

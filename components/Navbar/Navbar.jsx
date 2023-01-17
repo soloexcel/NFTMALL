@@ -244,24 +244,38 @@ const Navbar = () => {
     async function getAddress() {
         const ethers = require("ethers");
         const provider = new ethers.providers.Web3Provider(window.ethereum);
+        await provider.send("eth_requestAccounts", []);
         const signer = provider.getSigner();
         const addr = await signer.getAddress();
         updateAddress(addr);
     }
+
+    async function updateButton() {
+        const ethereumButton = document.querySelector('.enableEthereumButton');
+        if (ethereumButton) {
+            ethereumButton.textContent = "Connected";
+            ethereumButton.classList.remove("hover:bg-blue-70");
+            ethereumButton.classList.remove("bg-blue-500");
+            ethereumButton.classList.add("hover:bg-green-70");
+            ethereumButton.classList.add("bg-green-500");
+        }
+        
+      }
 
     useEffect(() => {
         let val = window.ethereum.isConnected();
         if(val) {
             getAddress();
             toggleConnect(val);
-            const ethereumButton = document.querySelector('.enableEthereumButton');
-            if (ethereumButton) {
-                ethereumButton.textContent = "Connected";
-                ethereumButton.classList.remove("hover:bg-blue-70");
-                ethereumButton.classList.remove("bg-blue-500");
-                ethereumButton.classList.add("hover:bg-green-70");
-                ethereumButton.classList.add("bg-green-500");
-            }
+            updateButton();
+            // const ethereumButton = document.querySelector('.enableEthereumButton');
+            // if (ethereumButton) {
+            //     ethereumButton.textContent = "Connected";
+            //     ethereumButton.classList.remove("hover:bg-blue-70");
+            //     ethereumButton.classList.remove("bg-blue-500");
+            //     ethereumButton.classList.add("hover:bg-green-70");
+            //     ethereumButton.classList.add("bg-green-500");
+            // }
             
         }
 
@@ -323,8 +337,8 @@ const Navbar = () => {
             {/* <Button blue={true} btnName={connected? "Connected" :"Connect Wallet"} handleClick={connectWebsite()}/> */}
 
 
-         <div className='text-white text-bold text-right mr-10 text-sm'>
-          {currAddress !== "0x" ? "Connected to":"Not Connected. Please login to view NFTs"} {currAddress !== "0x" ? (currAddress.substring(0,15)+'...'):""}
+         <div className='text-red text-bold text-right mr-10 text-sm'>
+          {currAddress !== "0x" ? "Connected to":"Not Connected. Please login to create or view NFTs"} {currAddress !== "0x" ? (currAddress.substring(0,40)+'...'):""}
       </div>
  </div>
 )
